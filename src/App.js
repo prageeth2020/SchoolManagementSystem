@@ -1,11 +1,11 @@
 import React from 'react';
 import logo from './logo.svg';
 import './App.css';
-
+import SideNavBar from "./Component/SideNavBar";
 function App() {
   return (
-    <div className="App">
-      <h1>School Management System</h1>
+    <div>
+        <SideNavBar/>
     </div>
   );
 }
