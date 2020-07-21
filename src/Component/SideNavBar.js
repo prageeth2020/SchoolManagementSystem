@@ -3,6 +3,10 @@ import $ from "jquery";
 import Dashboard from "./Dashboard";
 class SideNavPage extends Component {
 
+    componentDidMount() {
+        $("#wrapper").toggleClass("toggled");
+    }
+
     viewSideBar = (event) => {
         event.preventDefault();
         $("#wrapper").toggleClass("toggled");
@@ -28,7 +32,7 @@ class SideNavPage extends Component {
 
                     <div id="page-content-wrapper">
 
-                        <nav className="navbar navbar-expand-lg navbar-light bg-light border-bottom">
+                        <nav className="navbar navbar-expand-lg navbar-light bg-primary border-bottom text-white">
                             <button className="btn btn-secondary" id="menu-toggle" onClick={this.viewSideBar}><i className="fas fa-align-justify"></i></button>
 
                             <button className="navbar-toggler" type="button" data-toggle="collapse"
@@ -36,7 +40,7 @@ class SideNavPage extends Component {
                                     aria-expanded="false" aria-label="Toggle navigation">
                                 <span className="navbar-toggler-icon"></span>
                             </button>
-
+                            <p style={{margin : "auto"}} className="mx-2"> Dashboard ></p>
                             <div className="collapse navbar-collapse" id="navbarSupportedContent">
                                 <ul className="navbar-nav ml-auto mt-2 mt-lg-0">
                                     <li className="nav-item active">
